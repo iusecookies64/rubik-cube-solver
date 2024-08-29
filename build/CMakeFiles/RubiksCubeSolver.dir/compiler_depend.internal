@@ -846,7 +846,7 @@ CMakeFiles/RubiksCubeSolver.dir/Models/RubiksCube3dArray.cpp.o
 CMakeFiles/RubiksCubeSolver.dir/main.cpp.o
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/main.cpp
  /usr/include/stdc-predef.h
- /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Models/RubiksCube3dArray.cpp
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Models/RubiksCubeBitBoard.cpp
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Models/RubiksCube.h
  /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h
  /usr/include/c++/11/cassert

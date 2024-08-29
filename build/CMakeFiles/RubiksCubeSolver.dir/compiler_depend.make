@@ -843,7 +843,7 @@ CMakeFiles/RubiksCubeSolver.dir/Models/RubiksCube3dArray.cpp.o: ../Models/Rubiks
 
 CMakeFiles/RubiksCubeSolver.dir/main.cpp.o: ../main.cpp \
   /usr/include/stdc-predef.h \
-  ../Models/RubiksCube3dArray.cpp \
+  ../Models/RubiksCubeBitBoard.cpp \
   ../Models/RubiksCube.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h \
   /usr/include/c++/11/cassert \
@@ -1262,6 +1262,8 @@ CMakeFiles/RubiksCubeSolver.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/bits/uses_allocator_args.h \
   /usr/include/c++/11/variant
 
+
+../Models/RubiksCubeBitBoard.cpp:
 
 /usr/include/c++/11/variant:
 

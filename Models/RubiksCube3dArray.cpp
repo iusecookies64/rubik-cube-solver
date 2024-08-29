@@ -29,7 +29,7 @@ private:
             cube[faceIndex][i][0] = currFace[2][i];
         // updating the curr face col 2
         for (int i = 0; i < 3; i++)
-            cube[faceIndex][i][0] = currFace[0][i];
+            cube[faceIndex][i][2] = currFace[0][i];
     }
 
 public:
@@ -37,7 +37,6 @@ public:
 
     RubiksCube3dArray()
     {
-        cout << "initializing the cube" << endl;
         // initializing a solved cube
         for (int i = 0; i < 6; i++)
         {
@@ -92,21 +91,6 @@ public:
         return *this;
     }
 
-    RubiksCube &uPrime() override
-    {
-        u();
-        u();
-        u();
-        return *this;
-    }
-
-    RubiksCube &u2() override
-    {
-        u();
-        u();
-        return *this;
-    }
-
     RubiksCube &d()
     {
         rotateFace(FACE::DOWN);
@@ -124,21 +108,6 @@ public:
         for (int i = 0; i < 3; i++)
             cube[int(FACE::RIGHT)][2][i] = temp[i];
 
-        return *this;
-    }
-
-    RubiksCube &dPrime() override
-    {
-        d();
-        d();
-        d();
-        return *this;
-    }
-
-    RubiksCube &d2() override
-    {
-        d();
-        d();
         return *this;
     }
 
@@ -162,21 +131,6 @@ public:
         return *this;
     }
 
-    RubiksCube &lPrime() override
-    {
-        l();
-        l();
-        l();
-        return *this;
-    }
-
-    RubiksCube &l2() override
-    {
-        l();
-        l();
-        return *this;
-    }
-
     RubiksCube &r() override
     {
         rotateFace(FACE::RIGHT);
@@ -194,21 +148,6 @@ public:
         for (int i = 0; i < 3; i++)
             cube[int(FACE::UP)][i][2] = temp[i];
 
-        return *this;
-    }
-
-    RubiksCube &rPrime() override
-    {
-        r();
-        r();
-        r();
-        return *this;
-    }
-
-    RubiksCube &r2() override
-    {
-        r();
-        r();
         return *this;
     }
 
@@ -232,21 +171,6 @@ public:
         return *this;
     }
 
-    RubiksCube &fPrime() override
-    {
-        f();
-        f();
-        f();
-        return *this;
-    }
-
-    RubiksCube &f2() override
-    {
-        f();
-        f();
-        return *this;
-    }
-
     RubiksCube &b() override
     {
         rotateFace(FACE::BACK);
@@ -264,21 +188,6 @@ public:
         for (int i = 0; i < 3; i++)
             cube[int(FACE::LEFT)][2 - i][0] = temp[i];
 
-        return *this;
-    }
-
-    RubiksCube &bPrime() override
-    {
-        b();
-        b();
-        b();
-        return *this;
-    }
-
-    RubiksCube &b2() override
-    {
-        b();
-        b();
         return *this;
     }
 
@@ -312,5 +221,24 @@ public:
             }
         }
         return true;
+    }
+};
+
+struct Hash3dModel
+{
+    size_t operator()(const RubiksCube3dArray &rt) const
+    {
+        string res = "";
+        for (int i = 0; i < 6; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                for (int k = 0; k < 3; k++)
+                {
+                    res += rt.cube[i][j][k];
+                }
+            }
+        }
+        return (size_t)hash<string>()(res);
     }
 };

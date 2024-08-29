@@ -261,3 +261,93 @@ vector<RubiksCube::MOVE> RubiksCube::randomShuffle(unsigned int times)
 	}
 	return moves_performed;
 }
+
+RubiksCube &RubiksCube::uPrime()
+{
+	u();
+	u();
+	u();
+	return *this;
+}
+
+RubiksCube &RubiksCube::u2()
+{
+	u();
+	u();
+	return *this;
+}
+
+RubiksCube &RubiksCube::dPrime()
+{
+	d();
+	d();
+	d();
+	return *this;
+}
+
+RubiksCube &RubiksCube::d2()
+{
+	d();
+	d();
+	return *this;
+}
+
+RubiksCube &RubiksCube::lPrime()
+{
+	l();
+	l();
+	l();
+	return *this;
+}
+
+RubiksCube &RubiksCube::l2()
+{
+	l();
+	l();
+	return *this;
+}
+
+RubiksCube &RubiksCube::rPrime()
+{
+	r();
+	r();
+	r();
+	return *this;
+}
+
+RubiksCube &RubiksCube::r2()
+{
+	r();
+	r();
+	return *this;
+}
+
+RubiksCube &RubiksCube::fPrime()
+{
+	f();
+	f();
+	f();
+	return *this;
+}
+
+RubiksCube &RubiksCube::f2()
+{
+	f();
+	f();
+	return *this;
+}
+
+RubiksCube &RubiksCube::bPrime()
+{
+	b();
+	b();
+	b();
+	return *this;
+}
+
+RubiksCube &RubiksCube::b2()
+{
+	b();
+	b();
+	return *this;
+}

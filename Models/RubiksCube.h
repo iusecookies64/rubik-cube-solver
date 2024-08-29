@@ -73,39 +73,39 @@ public:
 
   virtual RubiksCube &f() = 0;
 
-  virtual RubiksCube &fPrime() = 0;
+  RubiksCube &fPrime();
 
-  virtual RubiksCube &f2() = 0;
+  RubiksCube &f2();
 
   virtual RubiksCube &b() = 0;
 
-  virtual RubiksCube &bPrime() = 0;
+  RubiksCube &bPrime();
 
-  virtual RubiksCube &b2() = 0;
+  RubiksCube &b2();
 
   virtual RubiksCube &l() = 0;
 
-  virtual RubiksCube &lPrime() = 0;
+  RubiksCube &lPrime();
 
-  virtual RubiksCube &l2() = 0;
+  RubiksCube &l2();
 
   virtual RubiksCube &r() = 0;
 
-  virtual RubiksCube &rPrime() = 0;
+  RubiksCube &rPrime();
 
-  virtual RubiksCube &r2() = 0;
+  RubiksCube &r2();
 
   virtual RubiksCube &u() = 0;
 
-  virtual RubiksCube &uPrime() = 0;
+  RubiksCube &uPrime();
 
-  virtual RubiksCube &u2() = 0;
+  RubiksCube &u2();
 
   virtual RubiksCube &d() = 0;
 
-  virtual RubiksCube &dPrime() = 0;
+  RubiksCube &dPrime();
 
-  virtual RubiksCube &d2() = 0;
+  RubiksCube &d2();
 
   string getCornerColorString(uint8_t ind) const;
 
