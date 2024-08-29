@@ -1,0 +1,3 @@
+/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/build/CMakeFiles/RubiksCubeSolver.dir
+/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/build/CMakeFiles/edit_cache.dir
+/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/build/CMakeFiles/rebuild_cache.dir
