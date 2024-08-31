@@ -23,8 +23,8 @@ public:
   {
     WHITE,
     YELLOW,
-    BLUE,
     GREEN,
+    BLUE,
     RED,
     ORANGE,
   };

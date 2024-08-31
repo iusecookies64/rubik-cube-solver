@@ -1260,8 +1260,21 @@ CMakeFiles/RubiksCubeSolver.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/optional \
   /usr/include/c++/11/memory_resource \
   /usr/include/c++/11/bits/uses_allocator_args.h \
-  /usr/include/c++/11/variant
+  /usr/include/c++/11/variant \
+  ../Models/RubiksCube3dArray.cpp \
+  ../Models/RubiksCube1dArray.cpp \
+  ../Solvers/DFSSolver.h \
+  ../Models/RubiksCube.h \
+  ../Solvers/BFSSolver.h \
+  ../Solvers/IDDFSSolver.h \
+  ../Solvers/DFSSolver.h
 
+
+../Solvers/IDDFSSolver.h:
+
+../Solvers/DFSSolver.h:
+
+../Models/RubiksCube1dArray.cpp:
 
 ../Models/RubiksCubeBitBoard.cpp:
 
@@ -1694,6 +1707,8 @@ CMakeFiles/RubiksCubeSolver.dir/main.cpp.o: ../main.cpp \
 /usr/include/ctype.h:
 
 /usr/include/errno.h:
+
+../Solvers/BFSSolver.h:
 
 /usr/include/c++/11/bits/functexcept.h:
 

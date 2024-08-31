@@ -330,4 +330,11 @@ CMakeFiles/RubiksCubeSolver.dir/main.cpp.o: \
  /usr/include/c++/11/bits/fs_dir.h /usr/include/c++/11/bits/fs_ops.h \
  /usr/include/c++/11/optional /usr/include/c++/11/memory_resource \
  /usr/include/c++/11/bits/uses_allocator_args.h \
- /usr/include/c++/11/variant
+ /usr/include/c++/11/variant \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Models/RubiksCube3dArray.cpp \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Models/RubiksCube1dArray.cpp \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/DFSSolver.h \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/../Models/RubiksCube.h \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/BFSSolver.h \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/IDDFSSolver.h \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/DFSSolver.h

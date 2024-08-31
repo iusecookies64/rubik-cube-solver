@@ -1,14 +1,63 @@
 #include "Models/RubiksCubeBitBoard.cpp"
+#include "Models/RubiksCube3dArray.cpp"
+#include "Models/RubiksCube1dArray.cpp"
+#include "Solvers/DFSSolver.h"
+#include "Solvers/BFSSolver.h"
+#include "Solvers/IDDFSSolver.h"
 #include <bits/stdc++.h>
 using namespace std;
+
+template <template <typename, typename> class S>
+void TestSolveSpeed(vector<RubiksCube::MOVE> &moves)
+{
+    int depth = moves.size();
+
+    RubiksCube1dArray cube1;
+    RubiksCube3dArray cube2;
+    RubiksCubeBitBoard cube3;
+
+    // applying the same moves of other cubes as well
+    for (auto move : moves)
+    {
+        cube1.move(move);
+        cube2.move(move);
+        cube3.move(move);
+    }
+
+    S<RubiksCube1dArray, Hash1dModel> solver1(cube1, depth);
+    S<RubiksCube3dArray, Hash3dModel> solver2(cube2, depth);
+    S<RubiksCubeBitBoard, HashBitBoard> solver3(cube3, depth);
+
+    string models[] = {"1d Model", "3d Model", "Bitboard Model"};
+    for (int i = 0; i < 3; i++)
+    {
+        auto start = chrono::high_resolution_clock::now();
+        if (i == 0)
+            solver1.solve();
+        else if (i == 1)
+            solver2.solve();
+        else
+            solver3.solve();
+        auto end = chrono::high_resolution_clock::now();
+        chrono::duration<double, milli> duration = end - start;
+        cout << models[i] << " solved in " << duration.count() / 1000 << "s\n";
+    }
+}
 
 signed main()
 {
     RubiksCubeBitBoard cube;
+    vector<RubiksCube::MOVE> moves = cube.randomShuffle(500);
     cube.print();
-    cube.move(RubiksCube::MOVE::L);
-    cube.print();
-    cube.move(RubiksCube::MOVE::F);
-    cube.print();
+    // cout << "\nTimes for dfs solver\n";
+    // TestSolveSpeed<DFSSolver>(moves);
+
+    // cout << "\nTimes for bfs solver\n";
+    // TestSolveSpeed<BFSSolver>(moves);
+
+    // cout << "\nTimes for iddfs solver\n";
+    // TestSolveSpeed<BFSSolver>(moves);
     return 0;
 }
+
+// DPRIME U2 L B U2 L2 LPRIME U2 B U

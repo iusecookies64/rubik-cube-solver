@@ -183,9 +183,9 @@ public:
             temp[i] = cube[getIndex(FACE::UP, 0, i)];
 
         for (int i = 0; i < 3; i++)
-            cube[getIndex(FACE::UP, 0, i)] = cube[getIndex(FACE::RIGHT, i, 0)];
+            cube[getIndex(FACE::UP, 0, i)] = cube[getIndex(FACE::RIGHT, i, 2)];
         for (int i = 0; i < 3; i++)
-            cube[getIndex(FACE::RIGHT, i, 0)] = cube[getIndex(FACE::DOWN, 2, 2 - i)];
+            cube[getIndex(FACE::RIGHT, i, 2)] = cube[getIndex(FACE::DOWN, 2, 2 - i)];
         for (int i = 0; i < 3; i++)
             cube[getIndex(FACE::DOWN, 2, 2 - i)] = cube[getIndex(FACE::LEFT, 2 - i, 0)];
         for (int i = 0; i < 3; i++)
@@ -194,7 +194,7 @@ public:
         return *this;
     }
 
-    RubiksCube1dArray &operator=(RubiksCube1dArray &rt)
+    RubiksCube1dArray &operator=(const RubiksCube1dArray &rt)
     {
         for (int i = 0; i < 54; i++)
         {
@@ -204,7 +204,7 @@ public:
         return *this;
     }
 
-    bool operator==(RubiksCube1dArray &rt)
+    bool operator==(const RubiksCube1dArray &rt) const
     {
         for (int i = 0; i < 54; i++)
         {

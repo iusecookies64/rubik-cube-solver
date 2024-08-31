@@ -180,9 +180,9 @@ public:
             temp[i] = cube[int(FACE::UP)][0][i];
 
         for (int i = 0; i < 3; i++)
-            cube[int(FACE::UP)][0][i] = cube[int(FACE::RIGHT)][i][0];
+            cube[int(FACE::UP)][0][i] = cube[int(FACE::RIGHT)][i][2];
         for (int i = 0; i < 3; i++)
-            cube[int(FACE::RIGHT)][i][0] = cube[int(FACE::DOWN)][2][2 - i];
+            cube[int(FACE::RIGHT)][i][2] = cube[int(FACE::DOWN)][2][2 - i];
         for (int i = 0; i < 3; i++)
             cube[int(FACE::DOWN)][2][2 - i] = cube[int(FACE::LEFT)][2 - i][0];
         for (int i = 0; i < 3; i++)
@@ -191,7 +191,7 @@ public:
         return *this;
     }
 
-    RubiksCube3dArray &operator=(RubiksCube3dArray &rt)
+    RubiksCube3dArray &operator=(const RubiksCube3dArray &rt)
     {
         for (int i = 0; i < 6; i++)
         {
@@ -207,7 +207,7 @@ public:
         return *this;
     }
 
-    bool operator==(RubiksCube3dArray &rt)
+    bool operator==(const RubiksCube3dArray &rt) const
     {
         for (int i = 0; i < 6; i++)
         {

@@ -4,11 +4,13 @@ class RubiksCubeBitBoard : public RubiksCube
 {
     uint64_t solved_side_config[6];
 
+    // indices of each cell of face in bitmask
     int arr[3][3] = {{0, 1, 2},
                      {7, 8, 3},
                      {6, 5, 4}};
 
-    uint64_t one_8 = (1 << 8) - 1, one_24 = (1 << 24) - 1;
+    // used to get or remove color from bit mask
+    uint64_t one_8 = (1 << 8) - 1;
 
     void rotateFace(FACE face)
     {
@@ -30,12 +32,12 @@ class RubiksCubeBitBoard : public RubiksCube
         bitBoard[int(face1)] = (bitBoard[int(face1)] & ~(one_8 << (8 * c13))) | (color3 << (8 * c13));
     }
     // adds color to cell of face
-    void addColor(FACE face, int cell, int color)
+    void addColor(FACE face, uint64_t cell, uint64_t color)
     {
         bitBoard[int(face)] = (bitBoard[int(face)] & ~(one_8 << (8 * cell))) | (color << (8 * cell));
     }
 
-    uint64_t getColorMask(FACE face, unsigned int cellIndex) const
+    uint64_t getColorMask(FACE face, uint64_t cellIndex) const
     {
         uint64_t color = (bitBoard[int(face)] & (one_8 << (8 * cellIndex))) >> (8 * cellIndex);
         return color;
@@ -160,9 +162,9 @@ public:
         rotateSide(FACE::DOWN, 2, 3, 4, FACE::BACK, 6, 7, 0);
         rotateSide(FACE::BACK, 6, 7, 0, FACE::UP, 2, 3, 4);
 
-        addColor(FACE::RIGHT, 2, color1);
-        addColor(FACE::RIGHT, 3, color2);
-        addColor(FACE::RIGHT, 4, color3);
+        addColor(FACE::UP, 2, color1);
+        addColor(FACE::UP, 3, color2);
+        addColor(FACE::UP, 4, color3);
 
         return *this;
     }
@@ -195,8 +197,8 @@ public:
         uint64_t color3 = getColorMask(FACE::UP, 2);
 
         rotateSide(FACE::UP, 0, 1, 2, FACE::RIGHT, 2, 3, 4);
-        rotateSide(FACE::RIGHT, 2, 3, 4, FACE::DOWN, 6, 5, 4);
-        rotateSide(FACE::DOWN, 6, 5, 4, FACE::LEFT, 0, 7, 6);
+        rotateSide(FACE::RIGHT, 2, 3, 4, FACE::DOWN, 4, 5, 6);
+        rotateSide(FACE::DOWN, 4, 5, 6, FACE::LEFT, 6, 7, 0);
 
         addColor(FACE::LEFT, 6, color1);
         addColor(FACE::LEFT, 7, color2);
@@ -205,7 +207,7 @@ public:
         return *this;
     }
 
-    RubiksCubeBitBoard &operator=(RubiksCubeBitBoard &rt)
+    RubiksCubeBitBoard &operator=(const RubiksCubeBitBoard &rt)
     {
         for (int i = 0; i < 6; i++)
         {
@@ -215,7 +217,7 @@ public:
         return *this;
     }
 
-    bool operator==(RubiksCubeBitBoard &rt)
+    bool operator==(const RubiksCubeBitBoard &rt) const
     {
         for (int i = 0; i < 6; i++)
         {
@@ -226,12 +228,12 @@ public:
     }
 };
 
-struct Hash1dModel
+struct HashBitBoard
 {
     size_t operator()(const RubiksCubeBitBoard &rt) const
     {
         uint64_t hash = 0;
-        for (int i = 0; i < 54; i++)
+        for (int i = 0; i < 6; i++)
         {
             hash ^= rt.bitBoard[i];
         }
