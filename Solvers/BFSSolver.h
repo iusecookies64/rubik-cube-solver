@@ -22,13 +22,13 @@ private:
     {
         queue<T> q;
         q.push(rubiksCube);
-        visited[rubiksCube] = 1; // depth 1
+        visited[rubiksCube] = 1; // depth 0
         while (!q.empty())
         {
             T node = q.front();
             q.pop();
             int currentDepth = visited[node];
-            if (currentDepth == max_search_depth)
+            if (currentDepth - 1 > max_search_depth)
             {
                 return false; // could not solve cube for given depth
             }

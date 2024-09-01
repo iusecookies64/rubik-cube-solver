@@ -24,7 +24,7 @@ public:
     {
         for (int depth = 1; depth <= max_search_depth; depth++)
         {
-            DFSSolver<T, H> solver(rubiksCube);
+            DFSSolver<T, H> solver(rubiksCube, depth);
             moves = solver.solve();
             if (solver.rubiksCube.isSolved())
             {

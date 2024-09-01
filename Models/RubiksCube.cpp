@@ -248,8 +248,11 @@ void RubiksCube::print() const
 vector<RubiksCube::MOVE> RubiksCube::randomShuffle(unsigned int times)
 {
 	vector<MOVE> moves_performed;
+	auto now = std::chrono::high_resolution_clock::now();
+	unsigned int seed = std::chrono::duration_cast<std::chrono::nanoseconds>(now.time_since_epoch()).count();
+
 	// random seed
-	srand(time(0));
+	srand(seed);
 	for (unsigned int i = 0; i < times; i++)
 	{
 		// getting a random move

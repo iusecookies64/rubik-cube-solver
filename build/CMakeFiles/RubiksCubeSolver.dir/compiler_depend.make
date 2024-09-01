@@ -2535,6 +2535,7 @@ CMakeFiles/RubiksCubeSolver.dir/main.cpp.o: ../main.cpp \
   ../Solvers/BFSSolver.h \
   ../Solvers/IDDFSSolver.h \
   ../Solvers/DFSSolver.h \
+  ../Solvers/IDAStarSolver.h \
   ../PatternDatabase/CornerPatternDatabase.cpp \
   ../PatternDatabase/PatternDatabase.h \
   ../Utils/NibbleArray.h \
@@ -2829,6 +2830,8 @@ CMakeFiles/RubiksCubeSolver.dir/main.cpp.o: ../main.cpp \
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigcontext.h:
+
+../Solvers/IDAStarSolver.h:
 
 /usr/include/c++/11/ext/new_allocator.h:
 

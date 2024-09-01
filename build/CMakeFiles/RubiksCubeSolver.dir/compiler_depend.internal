@@ -2541,6 +2541,7 @@ CMakeFiles/RubiksCubeSolver.dir/main.cpp.o
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/BFSSolver.h
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/IDDFSSolver.h
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/DFSSolver.h
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/IDAStarSolver.h
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/CornerPatternDatabase.cpp
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/PatternDatabase.h
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Utils/NibbleArray.h

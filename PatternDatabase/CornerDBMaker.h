@@ -43,7 +43,7 @@ public:
                     if (cornerdb.getNumOfMoves(node) > curr_depth)
                     {
                         q.push(node);
-                        // storing distance as currdepth + 1
+                        // storing distance as currdepth
                         cornerdb.setNumOfMoves(node, curr_depth);
                     }
                     node.invert(RubiksCube::MOVE(moveIndex));

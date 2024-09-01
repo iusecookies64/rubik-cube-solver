@@ -10,8 +10,8 @@ private:
     PermutationIndexer<8> indexer;
 
 public:
-    // initializing database size as 8! * 3^7 = 12931731
-    CornerPatternDatabase(int8_t init_value = 0) : PatternDatabase(12931731, init_value) {}
+    // initializing database size as (7! + 6! + ... + 1!) * 2187 = 1312200 which is highest index of a permutation
+    CornerPatternDatabase(int8_t init_value = 0) : PatternDatabase(13122000, init_value) {}
 
     uint32_t getCubeIndex(const RubiksCube &cube) override
     {

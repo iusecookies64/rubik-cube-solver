@@ -126,10 +126,6 @@ public:
             }
             reverse(moves.begin(), moves.end());
         }
-        else
-        {
-            cout << "could not solve\n";
-        }
 
         return moves;
     }

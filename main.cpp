@@ -5,8 +5,8 @@
 #include "Solvers/DFSSolver.h"
 #include "Solvers/BFSSolver.h"
 #include "Solvers/IDDFSSolver.h"
-// #include "Solvers/IDAStarSolver.h"
-#include "PatternDatabase/CornerPatternDatabase.cpp"
+#include "Solvers/IDAStarSolver.h"
+// #include "PatternDatabase/CornerPatternDatabase.cpp"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -35,44 +35,66 @@ void TestSolveSpeed(vector<RubiksCube::MOVE> &moves)
     for (int i = 0; i < 3; i++)
     {
         auto start = chrono::high_resolution_clock::now();
+        vector<RubiksCube::MOVE> moves;
         if (i == 0)
-            solver1.solve();
+            moves = solver1.solve();
         else if (i == 1)
-            solver2.solve();
+            moves = solver2.solve();
         else
-            solver3.solve();
+            moves = solver3.solve();
         auto end = chrono::high_resolution_clock::now();
         chrono::duration<double, milli> duration = end - start;
-        cout << models[i] << " solved in " << duration.count() / 1000 << "s\n";
+        cout << models[i] << (moves.empty() ? " not solved in " : " solved in ") << duration.count() / 1000 << "s\n";
     }
+}
+
+template <template <typename, typename> class S>
+void FindAverageTime(int depth, int iterations = 10)
+{
+    double total = 0;
+    for (int i = 0; i < iterations; i++)
+    {
+        RubiksCubeBitBoard cube;
+        cube.randomShuffle(depth);
+        S<RubiksCubeBitBoard, HashBitBoard> solver(cube, depth);
+        auto start = chrono::high_resolution_clock::now();
+        solver.solve();
+        auto end = chrono::high_resolution_clock::now();
+        chrono::duration<double, milli> duration = end - start;
+        total += (duration.count() / 1000);
+        cout << "Duration in iteration " << i + 1 << ": " << duration.count() / 1000 << "\n";
+    }
+    cout << "Final Average: " << total / iterations << "\n";
 }
 
 signed main()
 {
-    uint32_t depth = 500;
-    RubiksCubeBitBoard cube;
-    vector<RubiksCube::MOVE> moves = cube.randomShuffle(depth);
-    cube.print();
+    // uint32_t depth = 10;
+    // RubiksCubeBitBoard cube;
+    // vector<RubiksCube::MOVE> moves = cube.randomShuffle(depth);
+    // for (auto move : moves)
+    // {
+    //     cout << "(" << RubiksCube::getMove(move) << ", " << int(move) << ") ";
+    // }
+    // cout << endl;
 
-    // only run there algos for small depths
-    if (depth <= 7)
-    {
-        cout << "\nTimes for dfs solver\n";
-        TestSolveSpeed<DFSSolver>(moves);
+    // // only run there algos for small depths
+    // if (depth <= 7)
+    // {
+    //     cout << "\nTimes for dfs solver\n";
+    //     TestSolveSpeed<DFSSolver>(moves);
 
-        cout << "\nTimes for bfs solver\n";
-        TestSolveSpeed<BFSSolver>(moves);
+    //     cout << "\nTimes for bfs solver\n";
+    //     TestSolveSpeed<BFSSolver>(moves);
 
-        cout << "\nTimes for iddfs solver\n";
-        TestSolveSpeed<BFSSolver>(moves);
-    }
+    //     cout << "\nTimes for iddfs solver\n";
+    //     TestSolveSpeed<BFSSolver>(moves);
+    // }
 
     // cout << "\nTime for idastar solver\n";
     // TestSolveSpeed<IDAStarSolver>(moves);
 
-    CornerPatternDatabase db;
-    db.getFromFile("Database/cornerPatternDb.txt");
-    cout << db.getNumOfMoves(cube) << endl;
+    // FindAverageTime<IDAStarSolver>(10, 100);
 
     return 0;
 }

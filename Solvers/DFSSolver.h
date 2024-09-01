@@ -43,7 +43,7 @@ private:
 public:
     T rubiksCube;
 
-    DFSSolver(T _rubiksCube, int _max_search_depth = 18)
+    DFSSolver(T _rubiksCube, int _max_search_depth)
     {
         rubiksCube = _rubiksCube;
         max_search_depth = _max_search_depth;
@@ -51,7 +51,7 @@ public:
 
     vector<RubiksCube::MOVE> solve()
     {
-        dfs(1);
+        dfs(0);
         return moves;
     }
 };

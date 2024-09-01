@@ -339,8 +339,9 @@ CMakeFiles/RubiksCubeSolver.dir/main.cpp.o: \
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/BFSSolver.h \
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/IDDFSSolver.h \
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/DFSSolver.h \
- /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/CornerPatternDatabase.cpp \
- /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/PatternDatabase.h \
- /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/../Utils/NibbleArray.h \
- /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/../Models/RubiksCube.h \
- /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/../Utils/PermutationIndexer.h
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/IDAStarSolver.h \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/../PatternDatabase/CornerPatternDatabase.cpp \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/../PatternDatabase/PatternDatabase.h \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/../PatternDatabase/../Utils/NibbleArray.h \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/../PatternDatabase/../Models/RubiksCube.h \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/../PatternDatabase/../Utils/PermutationIndexer.h
