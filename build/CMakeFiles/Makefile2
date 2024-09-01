@@ -81,12 +81,12 @@ clean: CMakeFiles/RubiksCubeSolver.dir/clean
 CMakeFiles/RubiksCubeSolver.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubiksCubeSolver.dir/build.make CMakeFiles/RubiksCubeSolver.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubiksCubeSolver.dir/build.make CMakeFiles/RubiksCubeSolver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/build/CMakeFiles --progress-num=1,2,3,4 "Built target RubiksCubeSolver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target RubiksCubeSolver"
 .PHONY : CMakeFiles/RubiksCubeSolver.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/RubiksCubeSolver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/RubiksCubeSolver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/build/CMakeFiles 0
 .PHONY : CMakeFiles/RubiksCubeSolver.dir/rule

@@ -351,3 +351,120 @@ RubiksCube &RubiksCube::b2()
 	b();
 	return *this;
 }
+
+// the corners are indexed using 3 bits
+// up/down is decided by 2nd bit (i.e bit 2^2), u -> bit not set, d -> bit set
+// front/back is decided by 1st bit, f -> not set, b -> set
+// right/left is decided by 0th bit, r -> not set, l -> set
+string RubiksCube::getCornerColorString(uint32_t index) const
+{
+	string res = "";
+	switch (index)
+	{
+	// UFR
+	case 0:
+		res += getColorLetter(getColor(FACE::UP, 2, 2));
+		res += getColorLetter(getColor(FACE::FRONT, 0, 2));
+		res += getColorLetter(getColor(FACE::RIGHT, 0, 0));
+		break;
+	// UFL
+	case 1:
+		res += getColorLetter(getColor(FACE::UP, 2, 0));
+		res += getColorLetter(getColor(FACE::FRONT, 0, 0));
+		res += getColorLetter(getColor(FACE::LEFT, 0, 2));
+		break;
+	// UBR
+	case 2:
+		res += getColorLetter(getColor(FACE::UP, 0, 2));
+		res += getColorLetter(getColor(FACE::BACK, 0, 0));
+		res += getColorLetter(getColor(FACE::RIGHT, 0, 2));
+		break;
+	// UBL
+	case 3:
+		res += getColorLetter(getColor(FACE::UP, 0, 0));
+		res += getColorLetter(getColor(FACE::BACK, 0, 2));
+		res += getColorLetter(getColor(FACE::LEFT, 0, 0));
+		break;
+	// DFR
+	case 4:
+		res += getColorLetter(getColor(FACE::DOWN, 0, 2));
+		res += getColorLetter(getColor(FACE::FRONT, 2, 2));
+		res += getColorLetter(getColor(FACE::RIGHT, 2, 0));
+		break;
+	// DFL
+	case 5:
+		res += getColorLetter(getColor(FACE::DOWN, 0, 0));
+		res += getColorLetter(getColor(FACE::FRONT, 2, 0));
+		res += getColorLetter(getColor(FACE::LEFT, 2, 2));
+		break;
+	// DBR
+	case 6:
+		res += getColorLetter(getColor(FACE::DOWN, 2, 2));
+		res += getColorLetter(getColor(FACE::BACK, 2, 0));
+		res += getColorLetter(getColor(FACE::RIGHT, 2, 2));
+		break;
+	// DBL
+	case 7:
+		res += getColorLetter(getColor(FACE::DOWN, 2, 0));
+		res += getColorLetter(getColor(FACE::BACK, 2, 2));
+		res += getColorLetter(getColor(FACE::LEFT, 2, 0));
+		break;
+	default:
+		break;
+	}
+
+	return res;
+}
+
+// given a corner index return the actual index of the corner cubie (in solved cube)
+uint32_t RubiksCube::getCornerIndex(uint32_t index) const
+{
+	string cornerString = getCornerColorString(index);
+
+	uint32_t res = 0;
+	// checking for 0th bit
+	char c = getColorLetter(COLOR(int(FACE::LEFT))); // color of left face in solved cube
+	if (cornerString.find(c) != string::npos)
+	{
+		res |= 1;
+	}
+
+	// checking for 1st bit
+	c = getColorLetter(COLOR(int(FACE::BACK))); // color of back face in solved cube
+	if (cornerString.find(c) != string::npos)
+	{
+		res |= (1 << 1);
+	}
+
+	// checkinf for 2nd bit
+	c = getColorLetter(COLOR(int(FACE::DOWN))); // color of down face in solved cube
+	if (cornerString.find(c) != string::npos)
+	{
+		res |= (1 << 2);
+	}
+
+	return res;
+}
+
+// orientation is decided based on where up/down is present in the corner string
+// 0 => up/down on 0th index (default orientation)
+// 1 => up/down on 1st index
+// 2 => up/down on 2nd index
+uint32_t RubiksCube::getCornerOrientation(uint32_t index) const
+{
+	string cornerString = getCornerColorString(index);
+
+	// finding which of up/down color is present in the string
+	char c = getColorLetter(COLOR(int(FACE::UP)));
+	if (cornerString.find(c) == string::npos)
+	{
+		c = getColorLetter(COLOR(int(FACE::DOWN)));
+	}
+
+	if (cornerString[0] == c)
+		return 0;
+	else if (cornerString[1] == c)
+		return 1;
+	else
+		return 2;
+}

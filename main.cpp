@@ -1,9 +1,12 @@
+#include "Models/RubiksCube.h"
 #include "Models/RubiksCubeBitBoard.cpp"
 #include "Models/RubiksCube3dArray.cpp"
 #include "Models/RubiksCube1dArray.cpp"
 #include "Solvers/DFSSolver.h"
 #include "Solvers/BFSSolver.h"
 #include "Solvers/IDDFSSolver.h"
+// #include "Solvers/IDAStarSolver.h"
+#include "PatternDatabase/CornerPatternDatabase.cpp"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -46,18 +49,30 @@ void TestSolveSpeed(vector<RubiksCube::MOVE> &moves)
 
 signed main()
 {
+    uint32_t depth = 500;
     RubiksCubeBitBoard cube;
-    vector<RubiksCube::MOVE> moves = cube.randomShuffle(500);
+    vector<RubiksCube::MOVE> moves = cube.randomShuffle(depth);
     cube.print();
-    // cout << "\nTimes for dfs solver\n";
-    // TestSolveSpeed<DFSSolver>(moves);
 
-    // cout << "\nTimes for bfs solver\n";
-    // TestSolveSpeed<BFSSolver>(moves);
+    // only run there algos for small depths
+    if (depth <= 7)
+    {
+        cout << "\nTimes for dfs solver\n";
+        TestSolveSpeed<DFSSolver>(moves);
 
-    // cout << "\nTimes for iddfs solver\n";
-    // TestSolveSpeed<BFSSolver>(moves);
+        cout << "\nTimes for bfs solver\n";
+        TestSolveSpeed<BFSSolver>(moves);
+
+        cout << "\nTimes for iddfs solver\n";
+        TestSolveSpeed<BFSSolver>(moves);
+    }
+
+    // cout << "\nTime for idastar solver\n";
+    // TestSolveSpeed<IDAStarSolver>(moves);
+
+    CornerPatternDatabase db;
+    db.getFromFile("Database/cornerPatternDb.txt");
+    cout << db.getNumOfMoves(cube) << endl;
+
     return 0;
 }
-
-// DPRIME U2 L B U2 L2 LPRIME U2 B U

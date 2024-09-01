@@ -1,7 +1,6 @@
 CMakeFiles/RubiksCubeSolver.dir/main.cpp.o: \
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/main.cpp \
  /usr/include/stdc-predef.h \
- /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Models/RubiksCubeBitBoard.cpp \
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Models/RubiksCube.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/stdc++.h \
  /usr/include/c++/11/cassert \
@@ -331,10 +330,17 @@ CMakeFiles/RubiksCubeSolver.dir/main.cpp.o: \
  /usr/include/c++/11/optional /usr/include/c++/11/memory_resource \
  /usr/include/c++/11/bits/uses_allocator_args.h \
  /usr/include/c++/11/variant \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Models/RubiksCubeBitBoard.cpp \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Models/RubiksCube.h \
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Models/RubiksCube3dArray.cpp \
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Models/RubiksCube1dArray.cpp \
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/DFSSolver.h \
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/../Models/RubiksCube.h \
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/BFSSolver.h \
  /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/IDDFSSolver.h \
- /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/DFSSolver.h
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Solvers/DFSSolver.h \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/CornerPatternDatabase.cpp \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/PatternDatabase.h \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/../Utils/NibbleArray.h \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/../Models/RubiksCube.h \
+ /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/../Utils/PermutationIndexer.h

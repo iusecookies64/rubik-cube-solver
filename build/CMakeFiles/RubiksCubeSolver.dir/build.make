@@ -97,10 +97,52 @@ CMakeFiles/RubiksCubeSolver.dir/Models/RubiksCube3dArray.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RubiksCubeSolver.dir/Models/RubiksCube3dArray.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Models/RubiksCube3dArray.cpp -o CMakeFiles/RubiksCubeSolver.dir/Models/RubiksCube3dArray.cpp.s
 
+CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.o: CMakeFiles/RubiksCubeSolver.dir/flags.make
+CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.o: ../PatternDatabase/PatternDatabase.cpp
+CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.o: CMakeFiles/RubiksCubeSolver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.o -MF CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.o.d -o CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.o -c /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/PatternDatabase.cpp
+
+CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/PatternDatabase.cpp > CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.i
+
+CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/PatternDatabase.cpp -o CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.s
+
+CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.o: CMakeFiles/RubiksCubeSolver.dir/flags.make
+CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.o: ../PatternDatabase/CornerPatternDatabase.cpp
+CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.o: CMakeFiles/RubiksCubeSolver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.o -MF CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.o.d -o CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.o -c /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/CornerPatternDatabase.cpp
+
+CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/CornerPatternDatabase.cpp > CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.i
+
+CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/CornerPatternDatabase.cpp -o CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.s
+
+CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.o: CMakeFiles/RubiksCubeSolver.dir/flags.make
+CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.o: ../Utils/NibbleArray.cpp
+CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.o: CMakeFiles/RubiksCubeSolver.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.o -MF CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.o.d -o CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.o -c /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Utils/NibbleArray.cpp
+
+CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Utils/NibbleArray.cpp > CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.i
+
+CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Utils/NibbleArray.cpp -o CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.s
+
 CMakeFiles/RubiksCubeSolver.dir/main.cpp.o: CMakeFiles/RubiksCubeSolver.dir/flags.make
 CMakeFiles/RubiksCubeSolver.dir/main.cpp.o: ../main.cpp
 CMakeFiles/RubiksCubeSolver.dir/main.cpp.o: CMakeFiles/RubiksCubeSolver.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/RubiksCubeSolver.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/RubiksCubeSolver.dir/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/RubiksCubeSolver.dir/main.cpp.o -MF CMakeFiles/RubiksCubeSolver.dir/main.cpp.o.d -o CMakeFiles/RubiksCubeSolver.dir/main.cpp.o -c /home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/main.cpp
 
 CMakeFiles/RubiksCubeSolver.dir/main.cpp.i: cmake_force
@@ -115,6 +157,9 @@ CMakeFiles/RubiksCubeSolver.dir/main.cpp.s: cmake_force
 RubiksCubeSolver_OBJECTS = \
 "CMakeFiles/RubiksCubeSolver.dir/Models/RubiksCube.cpp.o" \
 "CMakeFiles/RubiksCubeSolver.dir/Models/RubiksCube3dArray.cpp.o" \
+"CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.o" \
+"CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.o" \
+"CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.o" \
 "CMakeFiles/RubiksCubeSolver.dir/main.cpp.o"
 
 # External object files for target RubiksCubeSolver
@@ -122,10 +167,13 @@ RubiksCubeSolver_EXTERNAL_OBJECTS =
 
 RubiksCubeSolver: CMakeFiles/RubiksCubeSolver.dir/Models/RubiksCube.cpp.o
 RubiksCubeSolver: CMakeFiles/RubiksCubeSolver.dir/Models/RubiksCube3dArray.cpp.o
+RubiksCubeSolver: CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.o
+RubiksCubeSolver: CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.o
+RubiksCubeSolver: CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.o
 RubiksCubeSolver: CMakeFiles/RubiksCubeSolver.dir/main.cpp.o
 RubiksCubeSolver: CMakeFiles/RubiksCubeSolver.dir/build.make
 RubiksCubeSolver: CMakeFiles/RubiksCubeSolver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable RubiksCubeSolver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable RubiksCubeSolver"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RubiksCubeSolver.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

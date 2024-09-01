@@ -177,6 +177,78 @@ Models/RubiksCube3dArray.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubiksCubeSolver.dir/build.make CMakeFiles/RubiksCubeSolver.dir/Models/RubiksCube3dArray.cpp.s
 .PHONY : Models/RubiksCube3dArray.cpp.s
 
+PatternDatabase/CornerPatternDatabase.o: PatternDatabase/CornerPatternDatabase.cpp.o
+.PHONY : PatternDatabase/CornerPatternDatabase.o
+
+# target to build an object file
+PatternDatabase/CornerPatternDatabase.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubiksCubeSolver.dir/build.make CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.o
+.PHONY : PatternDatabase/CornerPatternDatabase.cpp.o
+
+PatternDatabase/CornerPatternDatabase.i: PatternDatabase/CornerPatternDatabase.cpp.i
+.PHONY : PatternDatabase/CornerPatternDatabase.i
+
+# target to preprocess a source file
+PatternDatabase/CornerPatternDatabase.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubiksCubeSolver.dir/build.make CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.i
+.PHONY : PatternDatabase/CornerPatternDatabase.cpp.i
+
+PatternDatabase/CornerPatternDatabase.s: PatternDatabase/CornerPatternDatabase.cpp.s
+.PHONY : PatternDatabase/CornerPatternDatabase.s
+
+# target to generate assembly for a file
+PatternDatabase/CornerPatternDatabase.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubiksCubeSolver.dir/build.make CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.s
+.PHONY : PatternDatabase/CornerPatternDatabase.cpp.s
+
+PatternDatabase/PatternDatabase.o: PatternDatabase/PatternDatabase.cpp.o
+.PHONY : PatternDatabase/PatternDatabase.o
+
+# target to build an object file
+PatternDatabase/PatternDatabase.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubiksCubeSolver.dir/build.make CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.o
+.PHONY : PatternDatabase/PatternDatabase.cpp.o
+
+PatternDatabase/PatternDatabase.i: PatternDatabase/PatternDatabase.cpp.i
+.PHONY : PatternDatabase/PatternDatabase.i
+
+# target to preprocess a source file
+PatternDatabase/PatternDatabase.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubiksCubeSolver.dir/build.make CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.i
+.PHONY : PatternDatabase/PatternDatabase.cpp.i
+
+PatternDatabase/PatternDatabase.s: PatternDatabase/PatternDatabase.cpp.s
+.PHONY : PatternDatabase/PatternDatabase.s
+
+# target to generate assembly for a file
+PatternDatabase/PatternDatabase.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubiksCubeSolver.dir/build.make CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.s
+.PHONY : PatternDatabase/PatternDatabase.cpp.s
+
+Utils/NibbleArray.o: Utils/NibbleArray.cpp.o
+.PHONY : Utils/NibbleArray.o
+
+# target to build an object file
+Utils/NibbleArray.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubiksCubeSolver.dir/build.make CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.o
+.PHONY : Utils/NibbleArray.cpp.o
+
+Utils/NibbleArray.i: Utils/NibbleArray.cpp.i
+.PHONY : Utils/NibbleArray.i
+
+# target to preprocess a source file
+Utils/NibbleArray.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubiksCubeSolver.dir/build.make CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.i
+.PHONY : Utils/NibbleArray.cpp.i
+
+Utils/NibbleArray.s: Utils/NibbleArray.cpp.s
+.PHONY : Utils/NibbleArray.s
+
+# target to generate assembly for a file
+Utils/NibbleArray.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RubiksCubeSolver.dir/build.make CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.s
+.PHONY : Utils/NibbleArray.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -216,6 +288,15 @@ help:
 	@echo "... Models/RubiksCube3dArray.o"
 	@echo "... Models/RubiksCube3dArray.i"
 	@echo "... Models/RubiksCube3dArray.s"
+	@echo "... PatternDatabase/CornerPatternDatabase.o"
+	@echo "... PatternDatabase/CornerPatternDatabase.i"
+	@echo "... PatternDatabase/CornerPatternDatabase.s"
+	@echo "... PatternDatabase/PatternDatabase.o"
+	@echo "... PatternDatabase/PatternDatabase.i"
+	@echo "... PatternDatabase/PatternDatabase.s"
+	@echo "... Utils/NibbleArray.o"
+	@echo "... Utils/NibbleArray.i"
+	@echo "... Utils/NibbleArray.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

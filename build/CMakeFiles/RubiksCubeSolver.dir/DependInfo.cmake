@@ -10,6 +10,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Models/RubiksCube.cpp" "CMakeFiles/RubiksCubeSolver.dir/Models/RubiksCube.cpp.o" "gcc" "CMakeFiles/RubiksCubeSolver.dir/Models/RubiksCube.cpp.o.d"
   "/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Models/RubiksCube3dArray.cpp" "CMakeFiles/RubiksCubeSolver.dir/Models/RubiksCube3dArray.cpp.o" "gcc" "CMakeFiles/RubiksCubeSolver.dir/Models/RubiksCube3dArray.cpp.o.d"
+  "/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/CornerPatternDatabase.cpp" "CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.o" "gcc" "CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/CornerPatternDatabase.cpp.o.d"
+  "/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/PatternDatabase/PatternDatabase.cpp" "CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.o" "gcc" "CMakeFiles/RubiksCubeSolver.dir/PatternDatabase/PatternDatabase.cpp.o.d"
+  "/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/Utils/NibbleArray.cpp" "CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.o" "gcc" "CMakeFiles/RubiksCubeSolver.dir/Utils/NibbleArray.cpp.o.d"
   "/home/iusecookies64/Desktop/Tushar/WebDev/rubik-cube-solver/main.cpp" "CMakeFiles/RubiksCubeSolver.dir/main.cpp.o" "gcc" "CMakeFiles/RubiksCubeSolver.dir/main.cpp.o.d"
   )
 

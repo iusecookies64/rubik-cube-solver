@@ -107,11 +107,11 @@ public:
 
   RubiksCube &d2();
 
-  string getCornerColorString(uint8_t ind) const;
+  string getCornerColorString(uint32_t ind) const;
 
-  uint8_t getCornerIndex(uint8_t ind) const;
+  uint32_t getCornerIndex(uint32_t ind) const;
 
-  uint8_t getCornerOrientation(uint8_t ind) const;
+  uint32_t getCornerOrientation(uint32_t ind) const;
 };
 
 #endif // RUBIKS_CUBE_SOLVER_RUBIKSCUBE_H
